@@ -36,10 +36,9 @@ var form = {
     'x_referer'                     : 'channel.do?sysparm_channel=logtail'
 };
 
-var lastSeq = '-1';
 function printLogs(logs) {
     parseString(logs, function (err, result) {
-        lastSeq = result['xml']['$']['channel_last_sequence'];
+        form.sysparm_value = result['xml']['$']['channel_last_sequence'];
         var logs = result['xml']['item'];
         logs.forEach((log) => {
             console.log(log['$']['message']);
@@ -48,10 +47,6 @@ function printLogs(logs) {
     });
 }
 function getLogs() {
-    if (lastSeq != '') {
-        form.sysparm_value = lastSeq
-    }
-
     var formData = querystring.stringify(form);
     var contentLength = formData.length;
     options['headers']['Content-Length'] = contentLength;

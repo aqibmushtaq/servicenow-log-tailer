@@ -5,6 +5,7 @@ Configure the properties file to point at your ServiceNow instance.
 
 ### Cookies
 Get your cookies Using Chrome DevTools
+
 1. Login to your ServiceNow instance on Chrome
 2. Open DevTools
 3. Goto the Application tab and drill into the Cookies for your instance on the left pane

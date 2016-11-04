@@ -1,0 +1,25 @@
+{
+  "name": "servicenow-log-tailer",
+  "version": "0.0.1",
+  "description": "A command line ServiceNow Log Tailer",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aqibmushtaq/servicenow-log-tailer"
+  },
+  "keywords": [
+    "servicenow",
+    "log",
+    "tailer",
+    "tail",
+    "logger"
+  ],
+  "author": "Aqib Mushtaq",
+  "license": "MIT License",
+  "dependencies": {
+    "querystring": "^0.2.0",
+    "request": "^2.78.0",
+    "xml2js": "^0.4.17",
+    "zlib": "^1.0.5"
+  }
+}
